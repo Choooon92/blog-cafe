@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogDeCafé</title>
+    <link rel="stylesheet" href="css/normailize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin  centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">contacto</a>
+                </nav>
+
+            </div>
+        </div>
+
+
+
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+    </header>
+    
+    <main class="contenedor">  
+        <h3 class="centrar-texto">Contacto</h3>
+
+        <div class="contacto-bg"></div>
+
+        <form class="formulario">
+            <div class="campo">
+                <label class="campo__label" for="nombre">Nombre</label> <!-- podemos mejorar la accesibilidad web (sirve para ayudar a personas que no tienen buena movilidad en las manos, cegera, etc a poder navegar, en este caso al hacer click sobre el label nombre podemos acceder al casillero para poder escribir, para esto se nececitoa que en el input correspondiente se le agrege un id que debe ser el mismo que el for de label) -->
+                <input class="campo__field" type="text" placeholder="Tu Nombre" id="nombre">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label for="email">E-mail</label> <!-- podemos mejorar la accesibilidad web (sirve para ayudar a personas que no tienen buena movilidad en las manos, cegera, etc a poder navegar, en este caso al hacer click sobre el label nombre podemos acceder al casillero para poder escribir, para esto se nececitoa que en el input correspondiente se le agrege un id que debe ser el mismo que el for de label) -->
+                <input class="campo__field" type="email" placeholder="Tu E-mail" id="email">
+            </div>
+
+            <div class="campo">
+                <label class="campo__label for="mensaje">Mensaje</label> <!-- podemos mejorar la accesibilidad web (sirve para ayudar a personas que no tienen buena movilidad en las manos, cegera, etc a poder navegar, en este caso al hacer click sobre el label nombre podemos acceder al casillero para poder escribir, para esto se nececitoa que en el input correspondiente se le agrege un id que debe ser el mismo que el for de label) -->
+                <textarea class ="campo__field campo__field--textarea" id="mensaje"></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton boton--primario">
+        </form>
+
+        </div>
+    
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin  centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">contacto</a>
+                </nav>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script> <!-- vemos que las hojas de JS se agregan distinto a las hojas de css, css se agrega como un link sin embarjo JS se agrega como source y en src="la ubicacion del archivo" -->
+</body>
+</html>

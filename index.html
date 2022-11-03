@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogDeCafé</title>
+    <meta name="description" content="Página web de blog de café">
+
+    <!-- Prefetch --> <!-- a diferencia del preload lo que va a hacer es cargar mas rapido la proxima pagina que vaya a ver el usuario -->
+    <link rel="prefetch" href="nosotros.html" as="document">  <!-- Como saber a que pagina agregar el prefetch, si usamos google analitics podemos ver que pagina es la que visitan mas los usuarios y poder agregar el prefetch a esa pagina, no rinde agregarsela a todas porque sino seria lo mismo que nada -->
+
+
+    <!-- Preload -->  <!-- sirve para darle prioridad a las descargas de los elementos que querramos que descargue primero --> 
+    <link rel="preload" href="css/normailize.css" as="style">
+    <link rel="stylesheet" href="css/normailize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" as="font" crossorigin="crossorigin"> <!-- cuando se usa una fuente de otro lugar hay que agregar el crossorigin="crossorigin" sino no va a dejar usarla mucho -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin  centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">contacto</a>
+                </nav>
+
+            </div>
+        </div>
+
+
+
+        <div class="header__texto">
+            <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+            <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+        </div>
+    </header>
+    
+    <div class="contenedor contenido-principal">    
+        <main class="blog">
+            <h3>Nuestro Blog</h3>
+
+            <article class="entrada"> <!-- cada vez que haya una entrada de blog o una noticia, debe  ir dentro de un article -->
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp"> <!-- para agregar una foto webp que pesan muchisimo menos y es soportada por casi todos los navegadore, usaremos en lugar de un div, un picture y dentro le agregaremos un source srcset="ubicacion de la imagen" y en type declaramos que es una image/webp, como soporte por si no es soportado por el navegador tenemos que agregar el img tradicional, entonces si no lee el webp va a leer el formato jpg -->
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog"> <!-- Agregar loading="lazy" como atriburo a las imagenes, esto hace que la imagen no descargue hasta que el usuario llegue a esa parte, mejora la performance, por ahora solo lo soporta firefox -->
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Tipos de Grano de Cafe</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ipsa alias dolore fuga, tenetur vel impedit fugiat saepe minus, corporis deserunt eligendi repellat? Suscipit aut exercitationem incidunt accusantium obcaecati in?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+
+            </article>
+
+            <article class="entrada"> <!-- cada vez que haya una entrada de blog o una noticia, debe  ir dentro de un article -->
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp"> <!-- tambien se le puede agregar el loading lazy al source -->
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ipsa alias dolore fuga, tenetur vel impedit fugiat saepe minus, corporis deserunt eligendi repellat? Suscipit aut exercitationem incidunt accusantium obcaecati in?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+
+            </article>
+
+            <article class="entrada"> <!-- cada vez que haya una entrada de blog o una noticia, debe  ir dentro de un article -->
+                <div class="entrada__imagen">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4 class="no-margin">Beneficios de Café</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ipsa alias dolore fuga, tenetur vel impedit fugiat saepe minus, corporis deserunt eligendi repellat? Suscipit aut exercitationem incidunt accusantium obcaecati in?</p>
+                    <a href="entrada.html" class="boton boton--primario">Leer Entrada</a>
+                </div>
+
+            </article>
+
+        </main>
+
+        <aside class="sidebar">
+            <h3>Nuestros Cursos y Talleres</h3>
+
+            <!-- <ol>  </ol>  se usa para agregar una lista es una order list o lista ordenada, porque al agregar elementos lo enumera -->
+
+            <ul class="cursos no-padding"> <!-- similar a la order list lo unico que al ser una lista desordenada no los enumera sino que le agrega como unos puntos o asteriscos, pueden quitarse igual  -->
+
+                <li class="widget-curso">  <!-- dentro de la lista escribimos los elementos --> 
+                    <h4 class="no-margin">Técnicas de Extracción de Café</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">20</span>
+                    </p>
+
+                    <a href="entrada.html" class="boton boton--secundario">Más Información Sobre Nuestros Cursos</a>
+                </li>
+            
+                <li class="widget-curso">  <!-- dentro de la lista escribimos los elementos --> 
+                    <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">Gratis</span>
+                    </p>
+
+                    <p class="widget-curso__label">Cupo:
+                        <span class="widget-curso__info">20</span>
+                    </p>
+                 
+                    <a href="entrada.html" class="boton boton--secundario">Más Información Sobre Nuestros Cursos</a>
+                </li>
+            </ul>  
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin  centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
+                </a>
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">nosotros</a>
+                    <a href="cursos.html" class="navegacion__enlace">cursos</a>
+                    <a href="contacto.html" class="navegacion__enlace">contacto</a>
+                </nav>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Por regla, se recomienda agregar el codigo de JS antes del cierre del body, ya que el codigo de HTML va al comienzo -->
+
+    <script src="js/modernizr.js"></script> <!-- vemos que las hojas de JS se agregan distinto a las hojas de css, css se agrega como un link sin embarjo JS se agrega como source y en src="la ubicacion del archivo" -->
+
+</body>
+</html>
